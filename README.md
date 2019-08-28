@@ -1,44 +1,29 @@
-# The Rust Programming Language
+# Rust Programlama dili
 
-[![Build Status](https://travis-ci.com/rust-lang/book.svg?branch=master)](https://travis-ci.com/rust-lang/book)
+Bu depo "[The Rust Programming Language]" adlı kitabın Türkçe çevirisini barındırmaktadır.
 
-This repository contains the source of "The Rust Programming Language" book.
+[The Rust Programming Language]:https://doc.rust-lang.org/stable/book/
 
-[The book is available in dead-tree form from No Starch Press][nostarch]
 
-[nostarch]: https://nostarch.com/rust
+## Gereksinimler
 
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
-
-[stable]: https://doc.rust-lang.org/stable/book/
-[beta]: https://doc.rust-lang.org/beta/book/
-[nightly]: https://doc.rust-lang.org/nightly/book/
-
-## Requirements
-
-Building the book requires [mdBook], ideally the same 0.2.x version that
-rust-lang/rust uses in [this file][rust-mdbook]. To get it:
+Bu kitabın derleme işlemi için [mdBook] paketi gereklidir. En iyi biçimde derleyebilmek için [bu dosya][rust-mdbook]da belirttiğimiz sürümü kullanmalısınız. [mdBook] paketini edinmek için:
 
 [mdBook]: https://github.com/rust-lang-nursery/mdBook
 [rust-mdbook]: https://github.com/rust-lang/rust/blob/master/src/tools/rustbook/Cargo.toml
 
 ```bash
-$ cargo install mdbook --vers [version-num]
+$ cargo install mdbook --vers [sürüm-numarası]
 ```
 
-## Building
+## Derleme
 
-To build the book, type:
+Bu kitabı derlemek için:
 
 ```bash
 $ mdbook build
 ```
-
-The output will be in the `book` subdirectory. To check it out, open it in
-your web browser.
+Çıktı `book` alt dizininde olacaktır. Kontrol etmek için tarayıcınızda açın.
 
 _Firefox:_
 ```bash
@@ -56,47 +41,31 @@ $ Start-Process "chrome.exe" .\book\index.html  # Windows (PowerShell)
 $ start chrome.exe .\book\index.html            # Windows (Cmd)
 ```
 
-To run the tests:
+Test Etmek için:
 
 ```bash
 $ mdbook test
 ```
 
-## Contributing
+## Katkıda bulunmak
 
-We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
-kinds of contributions we're looking for.
+Yardım etmeniz bizi çok mutlu eder. Ne tür katkılar beklediğimizi öğrenmek için lütfen [CONTRIBUTING.md][contrib] dosyasını inceleyin. 
 
-[contrib]: https://github.com/rust-lang/book/blob/master/CONTRIBUTING.md
+[contrib]: https://github.com/over1ove/rust-programlama-dili/blob/master/CONTRIBUTING.md
 
-### Translations
 
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
+## Diyagramlar
 
-[Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
-[mdbook support]: https://github.com/rust-lang-nursery/mdBook/issues/5
-
-## Graphviz dot
-
-We're using [Graphviz](http://graphviz.org/) for some of the diagrams in the
-book. The source for those files live in the `dot` directory. To turn a `dot`
-file, for example, `dot/trpl04-01.dot` into an `svg`, run:
+Bu kitaptaki bazı diyagramlar için [Graphviz](http://graphviz.org/) kullanıyoruz. Diyagram dosyaları `dot`alt dizini içinde bulunur.
+Örnek olarak `dot/trpl04-01.dot` dosyasını .svg ye çevirmek için:
 
 ```bash
 $ dot dot/trpl04-01.dot -Tsvg > src/img/trpl04-01.svg
 ```
 
-In the generated SVG, remove the width and the height attributes from the `svg`
-element and set the `viewBox` attribute to `0.00 0.00 1000.00 1000.00` or other
-values that don't cut off the image.
+Oluşturulan SVG dosyasında `width` ve `height` niteliklerini silip `viewBox` niteliğini `0.00 0.00 1000.00 1000.00` olarak değiştirmelisiniz.
 
-## Spellchecking
 
-To scan source files for spelling errors, you can use the `spellcheck.sh`
-script. It needs a dictionary of valid words, which is provided in
-`dictionary.txt`. If the script produces a false positive (say, you used word
-`BTreeMap` which the script considers invalid), you need to add this word to
-`dictionary.txt` (keep the sorted order for consistency).
+## Yazım denetimi
+
+Dosyalardaki yazım hatalarını taramak için `spellcheck.sh` adlı betiği kullanabilirsiniz. Betik, `dictionary.txt` sözlük dosyasına ihtiyaç duymaktadır. Eğer sahte pozitif sonuçlar üretiyorsa ( Örneğin `BTreeMap` kelimesini kullandınız ve tararken hata verdi ) Bu durumda kelimeyi `dictionary.txt` dosyasına eklemelisiniz. ( Tutarlılık için lütfen alfabetik sıralamayı koruyunuz. )
