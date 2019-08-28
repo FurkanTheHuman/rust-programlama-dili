@@ -1,34 +1,34 @@
-# Style Guide
+# Stil Rehberi
 
-## Prose
+## Düzyazı
 
-* Prefer title case for chapter/section headings, ex: `## Generating a Secret
-  Number` rather than `## Generating a secret number`.
-* Prefer italics over single quotes when calling out a term, ex: `is an
-  *associated function* of` rather than `is an ‘associated function’ of`.
-* When talking about a method in prose, DO NOT include the parentheses, ex:
-  `read_line` rather than `read_line()`.
-* Hard wrap at 80 chars
-* Prefer not mixing code and not-code in one word, ex: ``Remember when we wrote
-  `use std::io`?`` rather than ``Remember when we `use`d `std::io`?``
+* Bölüm başlıklarını kurallara uygun yaz, Örnek: `Gizli bir numara üretmek` yerine `Gizli Bir Numara Üretmek`.
 
-## Code
+* Bir terimden bahsederken tek tırnak yerine italik yazı tipi tercih et. Örnek : 'İlişkili fonksiyon' yerine *ilişkili fonksiyon*
 
-* Add the file name before markdown blocks to make it clear which file we're
-  talking about, when applicable.
-* When making changes to code, make it clear which parts of the code changed
-  and which stayed the same... not sure how to do this yet
-* Split up long lines as appropriate to keep them under 80 chars if possible
-* Use `bash` syntax highlighting for command line output code blocks
+* Düzyazı içerisinde bir metoddan bahsederken parantezleri KULLANMA. Örnek: `read_line()` yerine `read_line`.
 
-## Links
+* Kod ve düzyazıyı tek kelimede kullanma. Örnek: ``Remember when we `use`d `std::io`?`` yerine ``Remember when we wrote
+  `use std::io`?``
 
-Once all the scripts are done:
 
-* If a link shouldn't be printed, mark it to be ignored
-  * This includes all "Chapter XX" intra-book links, which *should* be links
-    for the HTML version
-* Make intra-book links and stdlib API doc links relative so they work whether
-  the book is read offline or on docs.rust-lang.org
-* Use markdown links and keep in mind that they will be changed into `text at
-  *url*` in print, so word them in a way that it reads well in that format
+## KOD
+
+* Kod bloklarında hangi dosyayı kastettiğini anlayabilmemiz için önce dosya adını ekle.
+
+* Kodda değişiklik yaparken anlaşılır olması için; hangi parçanın aynı kaldığını, hangi parçanın değiştirildiğini belirtin.
+  
+* Uzun satırları 80 karakterden kısa tutmanız iyi olur.
+
+* Komut satırına yazılacak bir şey belirtirken başında `bash` söz dizimi kullanın.
+
+## Linkler
+
+Tüm betikler bittiğinde:
+
+* Eğer bir link ekrana basılmamalıysa, onu yoksayılacak olarak işaretleyin.
+  * Bu tüm "Chapter XX" kitap-içi ve HTML sürümü için olan linkleri kapsar. 
+
+* Kitap-içi linkleri ve stdlib API döküman linkleri relative dir. Bu yüzden hem offline hem de docs.rust-lang.org üzerinde çalışırlar. 
+
+* Linkler için markdown kullanın ve onların okunabilir formatta olmasına özen gösterin.
