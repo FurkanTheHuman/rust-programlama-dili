@@ -18,7 +18,7 @@ $ cargo install mdbook --vers [sürüm-numarası]
 
 ## Derleme
 
-Bu kitabı derlemek için:
+Kitabı derlemek için:
 
 ```bash
 $ mdbook build
